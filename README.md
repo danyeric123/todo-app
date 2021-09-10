@@ -1,5 +1,5 @@
 ## Description
-This is a small todo app where you can add todo items and delete items.
+This is a small todo app where you can add todo items and delete items. You can find the app on Expo website [here](https://expo.dev/@davidnagar/todo-app)
 
 ### Motivation
 I wanted to learn React-Native, but also give myself a challenge. So I did a todo app (of course!) in TypeScript. 

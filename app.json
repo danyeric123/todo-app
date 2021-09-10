@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "review-app",
-    "slug": "review-app",
+    "name": "todo-app",
+    "slug": "todo-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "A simple todo app that uses TypeScript",
+    "githubUrl": "https://github.com/danyeric123/todo-app"
   }
 }
