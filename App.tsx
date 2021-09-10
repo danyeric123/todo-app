@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View,ScrollView,FlatList,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View,ScrollView,FlatList,TouchableOpacity, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { uuid } from 'uuidv4';
 import Header from './components/Header';
 import TodoForm from './components/TodoForm';
@@ -28,16 +28,18 @@ export default function App() {
   }
   
   return (
-    <View style={styles.container}>
+    <TouchableWithoutFeedback onPress={()=>Keyboard.dismiss()} >
+      <View style={styles.container}>
       <Header />
       <TodoForm addTodo={addTodo} />
       <FlatList
         data={list}
         renderItem={({item})=>(
           <TodoItem deleteItem={deleteItem} id={item.id} text={item.text} key={item.id} />
-        )}
-      />
-    </View>
+          )}
+        />
+      </View>
+    </TouchableWithoutFeedback>
   );
 }
 
