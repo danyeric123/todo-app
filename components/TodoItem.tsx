@@ -1,3 +1,4 @@
+import { MaterialIcons } from '@expo/vector-icons';
 import React from 'react'
 import { StyleSheet, Text, View,TouchableOpacity, Button } from 'react-native';
 import { Todo } from '../App';
@@ -12,9 +13,7 @@ const TodoItem : React.FC<ItemProps> = ({text,id,deleteItem}) => {
   return (
     <TouchableOpacity style={styles.item}>
       <Text>{text}</Text>
-      <View style={styles.button}>
-        <Button title="delete" color="white" onPress={()=>deleteItem(id)} />
-      </View>
+      <MaterialIcons size={20} onPress={()=>deleteItem(id)} name="delete" />
     </TouchableOpacity>
   )
 }
@@ -24,6 +23,7 @@ export default TodoItem
 const styles = StyleSheet.create({
   item:{
     flex: 1,
+    flexDirection: 'row',
     alignContent: "center",
     alignItems: "center",
     justifyContent: "space-around",
@@ -32,9 +32,5 @@ const styles = StyleSheet.create({
     borderColor: '#bbb',
     borderWidth: 1,
     borderRadius: 10,
-  },
-  button:{
-    backgroundColor: "red",
-    borderRadius: 10
   }
 })
